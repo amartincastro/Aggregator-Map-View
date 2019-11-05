@@ -69,7 +69,16 @@
 <script type="text/javascript">
 
   var mapData = Highcharts.maps['countries/us/us-ca-all'];
+  var montana = Highcharts.maps['countries/us/us-mt-all'];
   var data = [{
+        name: 'AASF1: Helena',
+          "z": 5000,
+        lat: 46.609404,
+        lon: -111.970146,
+        "color":'#808000',
+        "value":9.5,
+        "UH-60":3
+    },{
         name: 'AASF3: Mather',
           "z": 5000,
         lat: 38.5816,
@@ -162,7 +171,8 @@ $(document).ready(function(){
 
               series: [{
                      mapData: mapData,
-                      showInLegend: false,
+                     montana: montana,
+                     showInLegend: false,
                  },{
                    type: 'mapbubble',
                    data: data,
